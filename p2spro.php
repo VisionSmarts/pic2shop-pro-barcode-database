@@ -186,14 +186,14 @@ function insertCodeFormat(code,format) {
 <h3 style="color:red"><?= $message; ?></h3>
 				 
 <!-- starts a scan, can override the formats, gps and lookup url if needed -->
-<p><a href="p2spro://scan?formats=EAN13,EAN8,UPCE,ITF,CODE39,CODE128,CODABAR&gps=TRUE&callback=<?= $lookupURL; ?>">
+<p><a href="p2spro://scan?formats=EAN13,EAN8,UPCE,ITF,CODE39,CODE128,CODABAR&callback=<?= $lookupURL; ?>">
 Lookup another barcode</a>
 </p>
 
 <h2>Barcode <?= $ref; ?> (<?= $format; ?>)</h2>
 Last scanned at <?= $gps; ?>
 
-<form action="pic2shop_scan.php" enctype="multipart/form-data" method="post">
+<form action="<?= $_SERVER['PHP_SELF']; ?>" enctype="multipart/form-data" method="post">
 <input type="hidden" name="ref" value="<?= $ref; ?>">
 <input type="hidden" name="format" value="<?= $format; ?>">
 <input type="hidden" name="gps" value="<?= $gps; ?>">
