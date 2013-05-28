@@ -18,15 +18,19 @@ Functionalities
 The purpose of this sample code is to demonstrate how to integrate a web app with the mobile app pic2shop PRO. It uses PHP and SQLite but the same results can easily be achieved with other web frameworks.
 
 Automatic app configuration link (formats, Home page, Lookup page) via: 
+	
 	p2spro://configure?
 
 Start a scan from a link in the page (with the option to override the lookup target) via:
+
 	p2spro://scan?
 
 Insert barcode data into a field via a javascript callback:
+
 	p2spro://scan?callback=javascript:insertCodeFormat()
 
 Image upload via:
+
 	<input type="file" accept="image/*" capture="camera" name="image">
 
 Retrieve GET parameters when the Home or Lookup URLs are fetched.
