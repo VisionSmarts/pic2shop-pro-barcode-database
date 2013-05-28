@@ -64,6 +64,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
 ### POST request: form submitted
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
   # get all form data
+  $userid = sqlite_escape_string($_POST['userid']);;
   $ref = sqlite_escape_string($_POST['ref']);
   $format =  sqlite_escape_string($_POST['format']);
   $gps =  sqlite_escape_string($_POST['gps']);
@@ -197,6 +198,7 @@ Last scanned at <?= $gps; ?>
 <input type="hidden" name="ref" value="<?= $ref; ?>">
 <input type="hidden" name="format" value="<?= $format; ?>">
 <input type="hidden" name="gps" value="<?= $gps; ?>">
+<input type="hidden" name="userid" value="<?= $userid; ?>">
 
 <p>
 Text:<br>
