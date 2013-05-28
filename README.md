@@ -20,8 +20,11 @@ The purpose of this sample code is to demonstrate how to integrate a web app wit
 Automatic app configuration link (formats, Home page, Lookup page) via: 
 	p2spro://configure?
 
-Start a scan from a link in the page via:
+Start a scan from a link in the page (with the option to override the lookup target) via:
 	p2spro://scan?
+
+Insert barcode data into a field via a javascript callback:
+	p2spro://scan?callback=javascript:insertCodeFormat()
 
 Image upload via:
 	<input type="file" accept="image/*" capture="camera" name="image">
