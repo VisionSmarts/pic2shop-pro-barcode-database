@@ -8,7 +8,7 @@ Single-file PHP database that integrates with mobile barcode scanner app *pic2sh
 About pic2shop PRO
 ------------------
 
-**Pic2shop PRO** is a paid app available for iOS and Android.  It reads EAN13, EAN8, UPC-A, UPC-E, Code 39, Code 128, ITF, (Interleaved 2 of 5) and Codabar (aka USD-4, NW-7) barcodes. After each scan, the app displays a user-defined url with the barcode string as parameter in the embedded web browser. EAN and UPC codes can be read with fixed-focus cameras, such as the iPod Touch 4th gen, the iPad2, the iPad front camera and many Android devices.
+**Pic2shop PRO** is a paid app available for iOS and Android.  It reads EAN13, EAN8, UPC-A, UPC-E, Code 39, Code 93, Code 128, ITF (Interleaved 2 of 5), Standard 2 of 5 (aka Code 25 or Ind2of5) and Codabar (aka USD-4, NW-7) barcodes. After each scan, the app displays a user-defined url with the barcode string as parameter in the embedded web browser. EAN and UPC codes can be read with fixed-focus cameras, such as the iPod Touch 4th gen, the iPad2, the iPad front camera and many Android devices.
 
 [Pic2shop PRO] [1] is developed by [Vision Smarts] [2].
 
