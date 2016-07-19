@@ -40,12 +40,12 @@ $message = "";
 ### GET request: home page or barcode lookup
 if ($_SERVER['REQUEST_METHOD'] == 'GET') {
   if (isset($_GET['userid'])) {
-    $userid = sqlite_escape_string($_GET['userid']);;
+    $userid = SQLite3::escapeString($_GET['userid']);;
   }
   if (isset($_GET['ref'])) {
-    $ref =  sqlite_escape_string($_GET['ref']);
-    if (isset($_GET['format'])) { $format =  sqlite_escape_string($_GET['format']); }
-    if (isset($_GET['gps'])) { $gps =  sqlite_escape_string($_GET['gps']); }
+    $ref =  SQLite3::escapeString($_GET['ref']);
+    if (isset($_GET['format'])) { $format =  SQLite3::escapeString($_GET['format']); }
+    if (isset($_GET['gps'])) { $gps =  SQLite3::escapeString($_GET['gps']); }
     $query = "SELECT title, note, date, info, imageType, imageData, checkbox FROM Demo " .
       "WHERE ref='".$ref."'";
     $result = $database->query($query);
@@ -64,13 +64,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
 ### POST request: form submitted
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
   # get all form data
-  $userid = sqlite_escape_string($_POST['userid']);;
-  $ref = sqlite_escape_string($_POST['ref']);
-  $format =  sqlite_escape_string($_POST['format']);
-  $gps =  sqlite_escape_string($_POST['gps']);
-  $title =  sqlite_escape_string($_POST['title']);
-  $note =  sqlite_escape_string($_POST['note']);
-  $date =  sqlite_escape_string($_POST['date']);
+  $userid = SQLite3::escapeString($_POST['userid']);;
+  $ref = SQLite3::escapeString($_POST['ref']);
+  $format =  SQLite3::escapeString($_POST['format']);
+  $gps =  SQLite3::escapeString($_POST['gps']);
+  $title =  SQLite3::escapeString($_POST['title']);
+  $note =  SQLite3::escapeString($_POST['note']);
+  $date =  SQLite3::escapeString($_POST['date']);
   if (isset($_POST['checkbox'])) {
     $checkbox = 1;
   }
@@ -79,7 +79,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
   }
   if (isset($_FILES['image']['tmp_name'])) {
     if (strlen($_FILES['image']['tmp_name'])>0) {
-      $imageType = sqlite_escape_string($_FILES['image']['type']);
+      $imageType = SQLite3::escapeString($_FILES['image']['type']);
       $imageData = file_get_contents($_FILES['image']['tmp_name']);
       # limit image size to 400px
       list($width, $height) = getimagesize($_FILES['image']['tmp_name']);
@@ -99,7 +99,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 	imagedestroy($image_scaled);
 	echo 'resized by '.$scale;
       }
-      $imageData = base64_encode($imageData); // sqlite_escape_string($imageData);
+      $imageData = base64_encode($imageData); // SQLite3::escapeString($imageData);
     }
   }
   # update record
