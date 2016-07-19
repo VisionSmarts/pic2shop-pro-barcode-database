@@ -60,5 +60,4 @@ ANDROID is a trademark of Google Inc.
 [2]: http://www.visionsmarts.com              "Vision Smarts"
 
 
-[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/VisionSmarts/pic2shop-pro-barcode-database/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
 
