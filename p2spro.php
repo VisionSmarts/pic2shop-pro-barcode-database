@@ -19,7 +19,7 @@ if(!$database->query($query))
   }
 
 ### get the self urls for configuration and callback
-$url = "http" . (($_SERVER['SERVER_PORT']==443) ? "s://" : "://") . $_SERVER['HTTP_HOST'] . $_SERVER['PHP_SELF'];
+$url = "https" . "://") . $_SERVER['HTTP_HOST'] . $_SERVER['PHP_SELF'];
 $homeURL = urlencode($url.'?userid=1234');
 $lookupURL = urlencode($url.'?userid=1234&ref=CODE&format=FORMAT');
 							   
