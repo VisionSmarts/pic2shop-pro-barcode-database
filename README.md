@@ -37,6 +37,34 @@ Retrieve GET parameters when the Home or Lookup URLs are fetched.
 
 Retrieve POST parameters when the form is submitted.
 
+
+Barcode Symbologies
+-------------------
+
+Here is the full list of symbologies. Only include the ones you need in the "formats" parameter in order to avoid potential misreads (some symbologies like Codabar or ITF don't have much error detection).
+
+
+| Symbology |
+| --------- |
+| EAN13     |
+| EAN8      |
+| UPCE      |
+| EAN_PLUS2 |
+| EAN_PLUS5 |
+| DATABAR_OMNIDIRECTIONAL |
+| DATABAR_EXPANDED |
+| DATABAR_LIMITED |
+| ITF       |
+| CODE39    |
+| CODE128   |
+| CODABAR   |
+| CODE93    |
+| STD2OF5   |
+| TELEPEN   |
+| QR        |
+| DATAMATRIX |
+
+
 Suggestions for extensions
 --------------------------
 
